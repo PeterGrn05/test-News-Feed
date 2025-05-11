@@ -1,7 +1,7 @@
 {
   "name": "news-feed",
   "version": "1.0.0",
-  "description": "",
+  "description": "**Это групповой проект, разработанный командой:**",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,7 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3",
+    "pg": "^8.15.6"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
@@ -34,5 +37,6 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-fetch-mock": "^3.0.3",
     "jsdom": "^26.1.0"
-  }
+  },
+  "keywords": []
 }

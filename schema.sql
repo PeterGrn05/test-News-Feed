@@ -24,5 +24,12 @@ CREATE TABLE News (
     title VARCHAR(100) NOT NULL,
     content TEXT NOT NULL,
     source_url VARCHAR(255),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE Subscriptions (
+  subscription_id SERIAL PRIMARY KEY,
+  user_id       INT NOT NULL REFERENCES Users(user_id),
+  category_id   INT NOT NULL REFERENCES Categories(category_id),
+  subscribed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(user_id, category_id)
 );
